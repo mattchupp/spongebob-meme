@@ -8,19 +8,18 @@
 </head>
 <body>
   <div class="container">
-    <p>Enter some text that you want to "mockify". Similar to the 
-      <a href="https://knowyourmeme.com/memes/mocking-spongebob" target="_blank">
-        Spongebob mocking meme
-      </a>
+    <p class="description">Enter some text that you want to "mockify". Similar to the 
+      <a 
+        href="https://knowyourmeme.com/memes/mocking-spongebob" 
+        target="_blank">Spongebob mocking meme</a>.
     </p>
     <div class="form">
       <form method="POST">
         <input name="text_input" type="text" placeholder="EnTeR yOuR tExT">
       </form> 
       {% if mocked_text %}
-        <input id="textToCopy" type="text" value="{{ mocked_text }}" readonly/>
-        <br />
-        <button class="copy-text-btn" onclick="copyText()">Copy Text</button>
+        <input onclick="copyText()" id="textToCopy" type="text" value="{{ mocked_text }}" readonly/>
+        <br /><span>*Select the text to copy.</span>
       {% endif %}
     </div>
   </div>

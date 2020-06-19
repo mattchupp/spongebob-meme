@@ -16,6 +16,10 @@ body {
   text-align: center;
 }
 
+.description {
+  margin-top: 2rem; 
+}
+
 a {
   color: #FFF56C; 
 }
@@ -47,7 +51,6 @@ label {
 }
 
 #textToCopy {
-  /* font-size: 1.2rem;  */
   text-align: center;
   border: none;
   background-color: #26B9C8;
