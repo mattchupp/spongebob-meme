@@ -7,14 +7,13 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 # path -> / 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
-  # return mock('Here is ANother string!')
-  return render_template('index.html')
+  if request.method == "POST": 
+    return mock('Here is ANother string!')
+  else: 
+    return render_template('index.html')
 
-@app.route('/', methods=['POST'])
-def form_submit(): 
-  return 'Submitted!'
 
 # Capitalize every other letter
 # ExPeCtEd OuTpUt
