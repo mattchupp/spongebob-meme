@@ -7,10 +7,20 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}" />
 </head>
 <body>
-  <form method="POST">
-    <input name="text_input" type="text" placeholder="EnTeR yOuR tExT">
-    <input type="submit" value="submit"/>
-  </form> 
-  <p>{{ mocked_text }}</p>
+  <div class="container">
+    <p>Enter some text that you want to "mockify". Similar to the 
+      <a href="https://knowyourmeme.com/memes/mocking-spongebob" target="_blank">
+        Spongebob mocking meme
+      </a>
+    </p>
+    <div class="form">
+      <form method="POST">
+        <input name="text_input" type="text" placeholder="EnTeR yOuR tExT">
+        <!-- <input type="submit" value="submit"/> -->
+      </form> 
+      <p>{{ mocked_text }}</p>
+    </div>
+  </div>
+  
 </body>
 </html>
