@@ -6,7 +6,7 @@ from flask import request, render_template
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-# path -> / 
+# for path -> / -- load index.html from templates
 @app.route('/', methods=['GET', 'POST'])
 def home():
   if request.method == "POST": 
@@ -17,7 +17,9 @@ def home():
 
 
 # Capitalize every other letter
-# ExPeCtEd OuTpUt
+# loop through each character, capitalize every other 
+# by incrementing i with each loop, append to an array, 
+# join then return --> ExPeCtEd OuTpUt 
 def mock(text): 
   newStr = []
   output = ''
@@ -32,7 +34,7 @@ def mock(text):
     i = i + 1
   
   return output.join(newStr)
-  
+
 
 # Run 
 if __name__ == '__main__':
