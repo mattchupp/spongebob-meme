@@ -15,7 +15,7 @@
     </p>
     <div class="form">
       <form method="POST">
-        <input name="text_input" type="text" placeholder="EnTeR yOuR tExT">
+        <input name="text_input" type="text" placeholder="EnTeR yOuR tExT"/>
       </form> 
       {% if mocked_text %}
         <input onclick="copyText()" id="textToCopy" type="text" value="{{ mocked_text }}" readonly/>
@@ -25,6 +25,7 @@
   </div>
   
   <script>
+    // copy text function
     function copyText() {
       var textToCopy = document.getElementById("textToCopy"); 
      
