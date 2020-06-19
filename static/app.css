@@ -37,7 +37,7 @@ p {
   margin-top: 3rem;
 }
 
-input[type=text] {
+textarea {
   font-size: 1rem;
   padding: .2rem;
 }
@@ -51,15 +51,15 @@ label {
 }
 
 #textToCopy {
-  text-align: center;
-  border: none;
-  background-color: #26B9C8;
+  /* text-align: center; */
+  /* border: none; */
+  /* background-color: #26B9C8; */
   margin: 1rem 0; 
-  color: #FFF56C; 
+  /* color: #FFF56C;  */
 }
 
 #textToCopy:focus {
-  outline: none; 
+  /* outline: none;  */
 }
 
 button {

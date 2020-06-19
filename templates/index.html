@@ -15,10 +15,15 @@
     </p>
     <div class="form">
       <form method="POST">
-        <input name="text_input" type="text" placeholder="EnTeR yOuR tExT"/>
+        <!-- <input name="text_input" type="text" placeholder="EnTeR yOuR tExT"/> -->
+        <textarea rows="5" cols="30" name="text_input" placeholder="EnTeR yOuR tExT"></textarea>
+        <br /><input type="submit" value="submit" />
       </form> 
       {% if mocked_text %}
-        <input onclick="copyText()" id="textToCopy" type="text" value="{{ mocked_text }}" readonly/>
+        <!-- <input onclick="copyText()" id="textToCopy" type="text" value="{{ mocked_text }}" readonly/> -->
+        <textarea onclick="copyText()" id="textToCopy" rows="5" cols="30">
+          {{ mocked_text }}
+        </textarea>
         <br /><span>*Select the text to copy.</span>
       {% endif %}
     </div>
