@@ -10,7 +10,9 @@ app.config["DEBUG"] = True
 @app.route('/', methods=['GET', 'POST'])
 def home():
   if request.method == "POST": 
-    return mock('Here is ANother string!')
+    mocked_text = mock(request.form['text_input'])
+    # return mock('Here is ANother string!')
+    return render_template('index.html', mocked_text = mocked_text)
   else: 
     return render_template('index.html')
 
