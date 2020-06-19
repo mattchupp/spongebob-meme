@@ -1,5 +1,6 @@
 import flask
-from flask import jsonify, request
+import random
+from flask import request
 
 
 app = flask.Flask(__name__)
@@ -8,25 +9,25 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET'])
 def home():
-  return "<p>Hello!</p>"
-
-# @app.route('/api', methods=['GET'])
-# def api():
-#   return jsonify(people)
-
-# @app.route('/api/person', methods=['GET'])
-# def api_id():
-#   if 'id' in request.args:
-#     id = int(request.args['id'])
-#   else: 
-#     return 'No id in request'
   
-#   personResponse = []
+  def mock(text): 
+    newStr = []
+    output = ''
 
-#   for person in people: 
-#     if person['id'] == id: 
-#       personResponse.append(person)
+    for c in text: 
+      num = randomNum()
+      if num == 1: 
+        newStr.append(c.capitalize())
+      else: 
+        newStr.append(c)
+    
+    return output.join(newStr)
 
-#   return jsonify(personResponse)
+  def randomNum(): 
+    number = random.randint(0,1)
+    return number
+  
+  return mock('Hello world!')
+
 
 app.run()
