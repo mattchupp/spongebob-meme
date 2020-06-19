@@ -35,6 +35,7 @@ p {
 
 input[type=text] {
   font-size: 1rem;
+  padding: .2rem;
 }
 
 input[type=submit] {
@@ -43,4 +44,22 @@ input[type=submit] {
 
 label {
   font-size: 1.2rem;
+}
+
+#textToCopy {
+  /* font-size: 1.2rem;  */
+  text-align: center;
+  border: none;
+  background-color: #26B9C8;
+  margin: 1rem 0; 
+  color: #FFF56C; 
+}
+
+#textToCopy:focus {
+  outline: none; 
+}
+
+button {
+  font-size: 1rem;
+  padding: .5rem; 
 }

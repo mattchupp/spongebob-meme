@@ -18,9 +18,27 @@
         <input name="text_input" type="text" placeholder="EnTeR yOuR tExT">
         <!-- <input type="submit" value="submit"/> -->
       </form> 
-      <p>{{ mocked_text }}</p>
+      {% if mocked_text %}
+        <!-- <p id="textToCopy">{{ mocked_text }}</p> -->
+        <input id="textToCopy" type="text" value="{{ mocked_text }}" readonly/>
+        <br />
+        <button class="copy-text-btn" onclick="copyText()">Copy Text</button>
+      {% endif %}
     </div>
   </div>
   
+  <script>
+    function copyText() {
+      var textToCopy = document.getElementById("textToCopy"); 
+      // alert(textToCopy)
+      textToCopy.select(); 
+      textToCopy.setSelectionRange(0, 99999); /*For mobile devices*/
+
+      document.execCommand("copy"); 
+
+      alert('Copied to clipboard ' + textToCopy.value); 
+    }
+  </script>
 </body>
 </html>
+

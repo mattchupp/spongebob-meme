@@ -4,7 +4,7 @@ from flask import request, render_template
 
 
 app = flask.Flask(__name__)
-# app.config["DEBUG"] = True
+app.config["DEBUG"] = True
 
 # path -> / 
 @app.route('/', methods=['GET', 'POST'])
