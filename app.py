@@ -35,4 +35,5 @@ def mock(text):
   
 
 # Run 
-app.run()
+if __name__ == '__main__':
+    app.run()
