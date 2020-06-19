@@ -1,6 +1,6 @@
 import flask
 import random
-from flask import request
+from flask import request, render_template
 
 
 app = flask.Flask(__name__)
@@ -9,9 +9,12 @@ app.config["DEBUG"] = True
 # path -> / 
 @app.route('/', methods=['GET'])
 def home():
-  
-  return mock('Here is ANother string!')
+  # return mock('Here is ANother string!')
+  return render_template('index.html')
 
+@app.route('/', methods=['POST'])
+def form_submit(): 
+  return 'Submitted!'
 
 # Capitalize every other letter
 # ExPeCtEd OuTpUt
