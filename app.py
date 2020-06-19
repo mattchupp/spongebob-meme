@@ -10,7 +10,7 @@ app.config["DEBUG"] = True
 @app.route('/', methods=['GET'])
 def home():
   
-  return mock('Hello world!')
+  return mock('Here is ANother string!')
 
 
 # Capitalize every other letter
@@ -18,20 +18,18 @@ def home():
 def mock(text): 
   newStr = []
   output = ''
+  i = 0
 
   for c in text: 
-    num = randomNum()
-    if num == 1: 
+    if (i%2) == 0: 
       newStr.append(c.capitalize())
     else: 
-      newStr.append(c)
+      newStr.append(c.lower())
+    
+    i = i + 1
   
   return output.join(newStr)
-
-def randomNum(): 
-  number = random.randint(0,1)
-  return number
-
+  
 
 # Run 
 app.run()
