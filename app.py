@@ -30,7 +30,7 @@ def mock(text):
       newStr.append(c.capitalize())
     else: 
       newStr.append(c.lower())
-    
+
     i = i + 1
   
   return output.join(newStr)
