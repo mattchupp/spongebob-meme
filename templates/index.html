@@ -18,22 +18,21 @@
         href="https://knowyourmeme.com/memes/mocking-spongebob" 
         target="_blank">Spongebob mocking meme</a>.
     </p>
-    <!-- <div> -->
+    
     <form method="POST">
       <div class="form-group">
         <textarea class="form-control" rows="3" name="text_input" placeholder="EnTeR yOuR tExT"></textarea>
         <input class="btn btn-secondary mt-2" type="submit" value="submit" />
       </div>
-      
     </form> 
+
     {% if mocked_text %}
-    <div class="form-group">
-      <textarea class="form-control" onclick="copyText()" id="textToCopy" rows="3">{{ mocked_text }}</textarea>
-      <span>*Select the text to copy.</span>
-    </div>
-      
+      <div class="form-group">
+        <textarea class="form-control" onclick="copyText()" id="textToCopy" rows="3">{{ mocked_text }}</textarea>
+        <span>*Select the text to copy.</span>
+      </div>  
     {% endif %}
-    <!-- </div> -->
+    
   </div>
   
   <script>
